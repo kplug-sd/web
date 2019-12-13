@@ -1,0 +1,306 @@
+
+/* ----- contentpanels.css ----- */
+@media all {
+/*  (do not remove this :) */
+
+.cpPanels .cpPanel {
+    margin: 1em 0 0 0;
+}
+
+.cpPanelsHeading {
+   background-color: lavender;
+   white-space: nowrap;
+   text-align: right;
+}
+
+.cpPanelsHeading .cpPanelsHeadingInput,
+.cpPanelHeading .cpPanelsHeadingInput {
+    float: left;
+}
+
+.cpPanelHeading {
+   background-color: lavender;
+}
+
+.cpPanelHeading td {
+    text-align: right
+}
+
+.cpViewletItem a {
+    white-space: nowrap;
+}
+
+.cpViewletItem span {
+    white-space:nowrap;
+    background-color: lightgreen;
+}
+
+/* Editing */
+
+.cpEditFormInputValues {
+    float: left;
+}
+
+.cpEditFormSubmitButtons {
+    float: right;
+}
+
+.cpRelatedContent li.cpRelatedItem{
+    display: inline;
+}
+
+/*
+** end content style
+** ------------------------------
+** begin page tab
+*/
+
+.cpPages {
+    text-align:right;
+}
+
+.cpPages li {
+    display: inline;
+}
+
+.cpPages li a {    
+    font-size: 90%;
+    background-color: transparent;
+    border: 1px solid #74ae0b;
+    color: #578308;
+    margin-right: 0.5em;
+    padding: 0em 1em;
+    text-decoration: none;
+    text-transform: lowercase;
+    z-index: 1;
+}
+.cpPages li.selected a {
+    background-color: #cde2a7;
+    color: #578308;
+}
+.cpPages li a:hover {
+    background-color: #cde2a7;
+    color: #578308;
+}
+
+/*
+** begin viewlet skins
+*/
+
+.documentContent .portletContent {
+    padding: 0.5em;
+}
+
+/* common viewlet skins, fix plone portlet css */
+
+/* default viewlet skins */
+
+/* no title skin */
+.notitlePortletWrapper div h5 {
+    display: none;
+}
+
+.notitlePortletWrapper .portletBody {
+    border: none;
+}
+
+/* zopezen skin */
+.zopezenPortletWrapper div h5 {
+    background-color: White;
+    font-style: normal;
+    border: none;
+    text-transform: capitalize;
+}
+
+.zopezenPortletWrapper .portletBody {
+    border: none;
+    border-top: 1px solid black;
+}
+
+/* default box */
+.boxPortletWrapper h5 {
+  margin: 0 0 0 0;
+  display: block
+}
+
+/* Alert skin */
+.alertPortletWrapper h5 {
+    background: #ffa500;
+    font-weight: bold;
+    border-color: #ffa500;
+    text-transform: uppercase;
+}
+
+.alertPortletWrapper .portletBody {
+    background-color: #ffce7b;
+    padding-left: 2.5em;
+    background-image: url(../../info_icon.gif);
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+}
+
+.alertPortletWrapper .portletContent {
+    padding: 0em;
+}
+
+/* dotted skin */
+.dottedPortletWrapper div h5, .zopezenPortletWrapper div h5 {
+    background: White;
+    font-weight: bold;
+    border: none;
+    padding-left: 0em;
+    text-transform: capitalize;
+    color: Black;
+}
+
+.dottedPortletWrapper h5 a, .zopezenPortletWrapper h5 a {
+    color: Black !important;
+}
+
+.dottedPortletWrapper  .portletBody {
+    border: 2px dotted #dee7ec;
+}
+
+/* ZopeZen skin */
+.zopezenPortletWrapper .portletBody {
+    border: none;
+    border-top: 2px solid #dee7ec;
+}
+
+/* Rounded skin */
+
+.roundedPortletWrapper .portlet {
+  position: relative;
+  background: url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_shadow.gif") top right repeat-y;
+  padding-right: 8px;
+}
+
+  /* The Holly Hack. IE/Win needs it but IE/Mac does not */
+   html .portlet {height: 1%;}
+  /* End hide from IE5-mac */
+
+.roundedPortletWrapper div h5 {
+  /* The next line is in plone.css for Plone 2.05, so using this 
+     version you need only z-index declaration */
+     position: relative; 
+     z-index: 2;
+     background: #3299e3 url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_header_bg.gif") top left repeat;
+     display: block;
+     color: white;
+     font-weight: bold;
+     padding: 0.3em 0.5em 0em 1em;
+     border-color: #3299e3;
+     height: 1.5em !important;
+}
+
+  /* The next style fixes some wired behavior of portlets when you see something
+     like two lines at the bottom of some portlets */
+.roundedPortletWrapper .portletBody {
+     border-color: #3299e3;
+     border-bottom-color: transparent;
+}
+
+.roundedPortletWrapper span.topLeft {
+  height: 4px;
+  width: 4px;
+  border: 0;
+  position: absolute;
+  top: -1px; /* if you're using Plone < 2.05 - use "top: 0;" */
+  z-index: 3;
+  left: 0;
+  background: transparent url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_tl.gif") top left no-repeat;
+}
+
+.roundedPortletWrapper span.topRight {
+  height: 9px;
+  width: 12px;
+  border: 0;
+  position: absolute;
+  top: -1px; /* if you're using Plone < 2.05 - use "top: 0;" */
+  z-index: 3;
+  right: 0;
+  background: transparent url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_tr.gif") top right no-repeat;
+}
+
+  /* IE/Win needs one extra-pixel */
+   html span.topRight { margin-right: 1px; }
+  /* End hide from IE5-mac */
+
+.roundedPortletWrapper span.botRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  height: 12px;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: -8px;
+  background: transparent url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_br.gif") bottom right no-repeat;
+}
+
+  /* The same problem with IE/Win */
+   html span.botRight { margin-right: -1px; }
+  /* End hide from IE5-mac */
+
+.roundedPortletWrapper span.botLeft {
+  height: 12px;
+  width: 9px;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background: transparent url("../../../external.gif?link=http://www.kernel-panic.org/portal_css/Plone Default/cp_skins/rounded/portlet_bl.gif") bottom left no-repeat;
+  margin-bottom: -8px;
+}
+
+.imageNewsImage {
+  float: left;
+  margin: 0.5em;
+}
+
+.imageNewsTitle {
+  font-weight:bold;
+}
+
+.viewlet-rss-link{
+  padding-right: 2px; 
+  float: right; 
+  display: block;
+}
+/*   */
+
+}
+
+
+/* ----- contentpanelsCustom.css ----- */
+@media all {
+/* You can costomize this file to add your viewlet skin in 2 steps.
+
+1. add your viewlet css definition, for example, the zopezen skin:
+
+.zopezenPortletWrapper h5 {
+    background: & dtml-backgroundColor ;;
+    font-style: normal;
+    border: none;
+    text-transform: capitalize;
+}
+
+.zopezenPortletWrapper .portletBody {
+    background: #FCFCFC;
+    border: none;
+    border-top: 1px solid black;
+}
+
+2. register it at ZMI portal_contentpanels
+*/
+
+/*  (do not remove this :) */
+
+/* remove this line, add your viewlets css here*/
+
+/*   */
+
+
+}
+

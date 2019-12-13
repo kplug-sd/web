@@ -1,0 +1,992 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type"
+          content="text/html;charset=utf-8" />
+
+    <title>
+        kplug_main
+        &mdash;
+        
+    </title>
+
+    
+      
+        <base href="http://www.kernel-panic.org/" />
+      
+    
+
+    <meta name="generator" content="Plone - http://plone.org" />
+
+
+    <!-- Plone ECMAScripts -->
+    
+      
+        
+            
+                <script type="text/javascript"
+                        src="http://www.kernel-panic.org/portal_javascripts/Plone%20Default/ploneScripts4128.js">
+                </script>
+                
+            
+        
+    
+    
+
+    
+	
+          
+        
+            
+                
+                    
+                    
+                        <style type="text/css"><!-- @import url(http://www.kernel-panic.org/portal_css/Plone%20Default/ploneStyles0407.css); --></style>
+                    
+                    
+                
+            
+            
+                
+                    <link rel="alternate stylesheet"
+                          type="text/css" media="screen"
+                          href="http://www.kernel-panic.org/portal_css/Plone%20Default/ploneStyles1262.css"
+                          title="Small Text" />
+                    
+                    
+                
+            
+            
+                
+                    <link rel="alternate stylesheet"
+                          type="text/css" media="screen"
+                          href="http://www.kernel-panic.org/portal_css/Plone%20Default/ploneStyles2852.css"
+                          title="Large Text" />
+                    
+                    
+                
+            
+            
+                
+                    
+                    
+                        <style type="text/css" media="all"><!-- @import url(http://www.kernel-panic.org/portal_css/Plone%20Default/ploneStyles0092.css); --></style>
+                    
+                    
+                
+            
+            
+                
+                    
+                    
+                        <style type="text/css" media="all"><!-- @import url(http://www.kernel-panic.org/portal_css/Plone%20Default/ploneStyles2822.css); --></style>
+                    
+                    
+                
+            
+        
+    
+        
+        
+    
+
+    <!-- Internet Explorer CSS Fixes -->
+    <!--[if lt IE 7]>
+        <style type="text/css" media="all">@import url(http://www.kernel-panic.org/IEFixes.css);</style>
+    <![endif]-->
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="http://www.kernel-panic.org/favicon.ico" />
+
+    <link rel="home" href="http://www.kernel-panic.org"
+          title="Front page" />
+    <link rel="search"
+          href="http://www.kernel-panic.org/search_form"
+          title="Search this site" />
+    <link rel="author"
+          href="http://www.kernel-panic.org/author/jpenix"
+          title="Author information" />
+    <link rel="contents"
+          href="http://www.kernel-panic.org/sitemap"
+          title="Site Map" />
+
+    
+
+    
+
+    
+
+    
+
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    
+      
+      
+    
+
+    
+
+      
+    
+    
+    
+    
+
+
+      
+      
+    
+
+    
+      
+      
+    
+
+  </head>
+
+  <body dir="ltr">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+
+        <div id="portal-header">
+          <a class="hiddenStructure" accesskey="2"
+             href="http://www.kernel-panic.org/author/#documentContent">Skip to content.</a>
+
+          <a class="hiddenStructure" accesskey="6"
+             href="http://www.kernel-panic.org/author/#portlet-navigation-tree">Skip to navigation</a>
+
+             <ul id="portal-siteactions">
+
+    <li id="siteaction-sitemap"><a
+    href="http://www.kernel-panic.org/sitemap" accesskey="3"
+    title="Site Map">Site Map</a></li>
+    <li id="siteaction-accessibility"><a
+    href="http://www.kernel-panic.org/accessibility-info"
+    accesskey="0" title="Accessibility">Accessibility</a></li>
+    <li id="siteaction-contact"><a
+    href="http://www.kernel-panic.org/contact-info"
+    accesskey="9" title="Contact">Contact</a></li>
+
+</ul>
+
+             <div id="portal-searchbox">
+    <form name="searchform"
+          action="http://www.kernel-panic.org/search"
+          style="white-space:nowrap"
+          onsubmit="return liveSearchSubmit()">
+
+        <label for="searchGadget" class="hiddenStructure">Search Site</label>
+
+        <div class="LSBox">
+        <input id="searchGadget" name="SearchableText"
+               type="text" size="15" title="Search Site"
+               accesskey="4" class="visibility:visible" />
+
+        <input class="searchButton" type="submit"
+               value="Search" />
+
+        <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+        </div>
+    </form>
+
+    <div id="portal-advanced-search" class="hiddenStructure">
+        <a href="http://www.kernel-panic.org/search_form"
+           accesskey="5">
+            Advanced Search&hellip;
+        </a>
+    </div>
+
+</div>
+
+             <h1 id="portal-logo">
+    <a href="http://www.kernel-panic.org" accesskey="1"></a>
+</h1>
+
+             <div id="portal-skinswitcher">
+  
+</div>
+
+             
+    <h5 class="hiddenStructure">Sections</h5>
+
+    <ul id="portal-globalnav">
+        <li id="portaltab-index_html" class="selected">
+            <a href="http://www.kernel-panic.org">Home</a></li>
+        <li id="portaltab-events" class="plain">
+            <a href="http://www.kernel-panic.org/events">Events</a></li>
+        <li id="portaltab-wiki" class="plain">
+            <a href="http://www.kernel-panic.org/wiki">Wiki</a></li>
+    </ul>
+
+          </div>
+
+          <div id="portal-personaltools-wrapper">
+
+<h5 class="hiddenStructure">Personal tools</h5>
+
+<ul id="portal-personaltools">
+   
+
+    
+        <li>
+            <a href="http://www.kernel-panic.org/login_form">
+               Log in
+            </a>
+        </li>
+    
+    
+        <li>
+            <a href="http://www.kernel-panic.org/join_form">
+               Join
+            </a>
+        </li>
+    
+
+</ul>
+</div>
+
+           <div id="portal-breadcrumbs">
+
+    <span id="breadcrumbs-you-are-here">You 
+are here:</span>
+    <a href="http://www.kernel-panic.org">Home</a>
+    
+
+</div>
+      </div>
+
+      <div class="visualClear"><!-- --></div>
+
+      
+
+      <table id="portal-columns">
+        <tbody>
+          <tr>
+            
+            <td id="portal-column-one">
+              <div class="visualPadding">
+                
+                  
+
+    
+        
+
+        
+            
+       
+<dl class="portlet" id="portlet-navigation-tree">
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        
+        
+        <a href="http://www.kernel-panic.org/sitemap"
+           class="tile">Navigation</a>
+
+           
+        <span class="portletTopRight"></span>
+    </dt>
+    
+    <dd class="portletItem lastItem">
+        <ul class="portletNavigationTree navTreeLevel0">
+            
+              <li class="navTreeItem">
+                   <div class="contenttype-plone-site">
+                       <a class="navTreeCurrentItem visualIconPadding"
+                          href="http://www.kernel-panic.org"
+                          title="">
+                       Home
+                       </a>
+                   </div>
+               </li>
+               
+            
+            
+                
+                
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/books"
+           class="state-published visualIconPadding"
+           title="Book Reviews by KPLUG Members">Book Reviews</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/contact"
+           class="state-published visualIconPadding"
+           title="">Contact KPLUG</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-topic">
+        
+        
+        <a href="http://www.kernel-panic.org/events"
+           class="state-published visualIconPadding"
+           title="Site Events">Events</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/groups"
+           class="state-published visualIconPadding"
+           title="Container for groups">Groups</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-topic">
+        
+        
+        <a href="http://www.kernel-panic.org/jobs-1"
+           class="state-published visualIconPadding"
+           title="">Jobs</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/meetings"
+           class="state-published visualIconPadding"
+           title="">Meetings</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-large-plone-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/Members"
+           class="state-published visualIconPadding"
+           title="Container for portal members' home directories">Members</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/raffles"
+           class="state-published visualIconPadding"
+           title="">Monthly Raffle</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-topic">
+        
+        
+        <a href="http://www.kernel-panic.org/news"
+           class="state-published visualIconPadding"
+           title="Site News">News</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-photo-album">
+        
+        
+        <a href="http://www.kernel-panic.org/photos"
+           class="state-published visualIconPadding"
+           title="Photos and other images from KPLUG">Photos</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/contrib"
+           class="state-published visualIconPadding"
+           title="This area is where you will find links to pages contributed by members of the Kernel-Panic Linux User Group. Some are here, because they don't fit neatly in one of the other categories. Some are pages created by members as part of their presentations at prior meeting. We hope you will find all of them useful.">User Contributed Files</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/wiki"
+           class="state-published visualIconPadding"
+           title="Collection of knowledge that our members have put together.">Wiki</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+    <div class="contenttype-folder">
+        
+        
+        <a href="http://www.kernel-panic.org/installfest"
+           class="state-published visualIconPadding"
+           title="">Linux Lab</a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+                
+            
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+
+        
+
+        
+
+        
+    
+    
+        
+
+        
+            
+
+<dl class="portlet" id="portlet-login">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="http://www.kernel-panic.org/login_form"
+           class="tile">Log in</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <form action="http://www.kernel-panic.org/login_form"
+              name="loginform" method="post">
+
+            <input type="hidden" name="form.submitted" value="1" />
+            <input type="hidden" name="came_from"
+                   value="http://www.kernel-panic.org/author/" />
+            <input type="hidden" name="js_enabled" id="js_enabled" value="0" />
+            <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="" />
+            <input type="hidden" name="login_name" id="login_name" value="" />
+            <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
+
+            <div class="field">
+                <label for="__ac_name">Login Name</label>
+                <br />
+                <input type="text" size="10"
+                       alt="Login Name"
+                       onclick="showCookieMessage('cookies_message')"
+                       name="__ac_name" value=""
+                       id="__ac_name" />
+            </div>
+            
+            <div class="field">
+                <label for="__ac_password">Password</label>
+                <br />
+                <input type="password" size="10"
+                       alt="Password"
+                       onclick="showCookieMessage('cookies_message')"
+                       name="__ac_password"
+                       id="__ac_password" />
+            </div>
+
+            <div id="cookies_message" class="portalMessage"
+                 style="display:none">
+                Cookies are not enabled. You must <a href="enabling_cookies">enable cookies</a> before you can log in.
+            </div>
+            
+            <div class="formControls">
+            
+                <input class="context" type="submit"
+                       name="submit" value="Log in"
+                       alt="Log in"
+                       onclick="javascript:return setLoginVars('__ac_name','login_name','__ac_password','pwd_empty','js_enabled','cookies_enabled')" />
+            </div>
+        </form>
+    </dd>
+    
+    <dd class="portletItem even">
+        <a href="http://www.kernel-panic.org/mail_password_form"
+           class="tile">
+           <img src="http://www.kernel-panic.org/info_icon.gif" alt="" title="" height="16" width="16" />
+           Forgot your password?
+        </a>
+    </dd>
+    
+    <dd class="portletItem lastItem">
+        <a href="http://www.kernel-panic.org/join_form"
+           class="tile">
+            <img src="http://www.kernel-panic.org/user.gif" alt="" title="User" height="16" width="16" />
+            New user?
+        </a>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+        
+    
+    
+        
+
+        
+            
+        
+
+        
+
+        
+    
+
+                
+                &nbsp;
+              </div>
+            </td>
+            
+
+            
+            <td id="portal-column-content">
+
+              
+    
+
+        
+
+        
+ 
+    <div id="content" class="">
+
+        
+        
+        
+
+        
+
+        <div class="documentContent" id="region-content">
+
+            <a name="documentContent"></a>
+                    
+            
+
+            <!-- Author information -->
+            
+
+            <h1 class="documentFirstHeading"></h1>
+
+            <div class="discreet">
+                
+
+                
+            </div>
+
+            <img src="http://www.kernel-panic.org/defaultUser.gif"
+                 alt="" class="portraitPhoto" width="75"
+                 style="float: left; margin: 1em;" />
+                      
+
+            <div class="documentDescription"></div>
+
+            <div class="visualClear"><!-- --></div>
+            
+            
+
+            
+
+            <div class="formControls">
+            <form action="http://www.kernel-panic.org/login_form">
+               <input class="standalone" type="submit"
+                      value="Log in to send feedback" />
+            </form>
+            </div>
+
+
+            <!-- feedback form -->        
+            
+            <!-- listing of content created by this user -->
+        
+            
+
+        </div>
+    </div> <!-- end simulated tabs -->
+        
+    
+
+    
+
+
+            </td>
+            
+
+            
+            <td id="portal-column-two">
+              <div class="visualPadding">
+                
+                  
+
+    
+        
+
+        
+            
+        
+
+        
+
+        
+    
+    
+        
+
+        
+            
+        
+
+        
+
+        
+    
+    
+        
+
+        
+            
+    <!-- The calendar, rendered as a table -->
+
+    <table class="ploneCalendar" id="thePloneCalendar"
+           summary="Calendar">
+        <thead>
+            <tr>
+                <th id="calendar-previous">
+                    <a href="http://www.kernel-panic.org/author?None&amp;month:int=11&amp;year:int=2019&amp;orig_query=None"
+                       rel="nofollow" title="Previous month">&laquo;</a>
+                </th>
+                <th colspan="5">
+                    
+                        December
+                        2019
+                    
+                </th>
+                  <th id="calendar-next">
+                    <a href="http://www.kernel-panic.org/author?None&amp;month:int=1&amp;year:int=2020&amp;orig_query=None"
+                       rel="nofollow" title="Next month">&raquo;</a>
+                </th>
+            </tr>
+            <tr class="weekdays">
+                
+                    <td>Su</td>
+                
+                
+                    <td>Mo</td>
+                
+                
+                    <td>Tu</td>
+                
+                
+                    <td>We</td>
+                
+                
+                    <td>Th</td>
+                
+                
+                    <td>Fr</td>
+                
+                
+                    <td>Sa</td>
+                
+            </tr>
+        </thead>
+
+        
+        <tbody>
+            <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+            </tr>
+            <tr>
+               <td>8</td>
+               <td>9</td>
+               <td>10</td>
+               <td>11</td>
+               <td class="todaynoevent">12</td>
+               <td>13</td>
+               <td>14</td>
+            </tr>
+            <tr>
+               <td>15</td>
+               <td>16</td>
+               <td>17</td>
+               <td>18</td>
+               <td>19</td>
+               <td>20</td>
+               <td>21</td>
+            </tr>
+            <tr>
+               <td>22</td>
+               <td>23</td>
+               <td>24</td>
+               <td>25</td>
+               <td>26</td>
+               <td>27</td>
+               <td>28</td>
+            </tr>
+            <tr>
+               <td>29</td>
+               <td>30</td>
+               <td>31</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+        
+
+        
+
+        
+    
+    
+        
+
+        
+            
+        
+
+        
+
+        
+    
+
+                
+                &nbsp;
+              </div>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+      
+
+      <div class="visualClear"><!-- --></div>
+
+
+      <hr class="netscape4" />
+
+      
+
+        <div id="portal-footer">
+
+<p>Please direct any questions, comments or complaints about this site to <a href="mailto:webmaster@kernel-panic.org">webmaster@kernel-panic.org</a></p>
+
+
+Plone and its visual design is Copyright &copy; 2000-<span>2019</span>
+by
+<a href="http://www.plonesolutions.com">Alexander Limi</a>,
+<a href="http://www.enfoldsystems.com">Alan Runyan</a>,
+<a href="http://blacktar.com">Vidar Andersen</a>.
+
+
+</div>
+
+        <div id="portal-colophon">
+      
+
+      <a href="http://plone.org"
+         class="colophonIcon colophonIconPlone"
+         title="This Plone site was built using Plone CMS, the Open Source Content Management System. Click for more information.">
+        Powered by Plone CMS, the Open Source Content Management System
+      </a>
+
+      
+
+      <p class="discreet">
+        This site conforms to the following standards:
+      </p>
+
+      <div class="colophonWrapper">
+      <ul>
+    <li>
+      <a href="http://www.section508.gov"
+         class="colophonIcon colophonIcon508"
+         title="This Plone site conforms to the US Government Section 508 Accessibility Guidelines.">
+        Section 508
+      </a>
+    </li>
+    <li>
+      <a href="http://www.w3.org/WAI/WCAG1AA-Conformance"
+         class="colophonIcon colophonIconWAI"
+         title="This Plone site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
+        WCAG
+      </a>
+    </li>
+    <li>
+      <a href="http://validator.w3.org/check/referer"
+         class="colophonIcon colophonIconXHTML"
+         title="This Plone site is valid XHTML.">
+        Valid XHTML
+      </a>
+    </li>
+    <li>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer&amp;warning=no&amp;profile=css3&amp;usermedium=all"
+         class="colophonIcon colophonIconCSS"
+         title="This Plone site was built with valid CSS.">
+        Valid CSS
+      </a>
+    </li>
+    <li>
+      <a href="http://plone.org/browsersupport"
+         class="colophonIcon colophonIconAnyBrowser"
+         title="This Plone site is usable in any web browser.">
+        Usable in any browser
+      </a>
+    </li>
+      </ul>
+      </div>
+
+    </div>
+      
+
+    </div>
+
+</body>
+</html>
+
+

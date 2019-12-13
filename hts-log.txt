@@ -1,0 +1,36 @@
+HTTrack3.49-2 launched on Thu, 12 Dec 2019 20:10:28 at http://http://www.kernel-panic.org/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w http://http://www.kernel-panic.org/ -O "/home/tony/websites/KPLUG Demo" -n -%P -N0 -s2 -x -p7 -D -a -K0 -c4 -%k -r2 -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:10:29	Warning: 	Note: due to http://www.kernel-panic.org remote robots.txt rules, links beginning with these path will be forbidden: /photos/ (see in the options to disable this)
+20:22:46	Warning: 	Note: due to www.kernel-panic.org remote robots.txt rules, links beginning with these path will be forbidden: /photos/ (see in the options to disable this)
+20:23:25	Error: 	"Forbidden" (403) at link www.kernel-panic.org/contact-info (from http://www.kernel-panic.org/)
+20:24:03	Error: 	"Forbidden" (403) at link www.kernel-panic.org/join_form (from http://www.kernel-panic.org/)
+20:26:38	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/jpenix.html
+20:26:38	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/ambrus.html
+20:26:38	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/gkade.html
+20:26:38	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/pacneil.html
+20:26:38	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/index.html
+20:26:40	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/jgsack.html
+20:26:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/info_icon.gif
+20:26:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/mail_icon.gif
+20:26:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/print_icon.gif
+20:26:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/document_icon.gif
+20:26:41	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/rss.gif
+20:26:41	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/defaultUser.gif
+20:26:41	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): www.kernel-panic.org/book.gif
+20:26:42	Warning: 	HTML file (33082 bytes) retransferred due to lack of cache: www.kernel-panic.org/wiki/KplugMembership
+20:26:47	Warning: 	HTML file (24615 bytes) retransferred due to lack of cache: www.kernel-panic.org/meetings/installfest/index_html
+20:27:43	Warning: 	HTML file (23264 bytes) retransferred due to lack of cache: www.kernel-panic.org/author/ambrus
+20:28:40	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/ambrus.html
+20:28:40	Warning: 	HTML file (26321 bytes) retransferred due to lack of cache: www.kernel-panic.org/author/gkade
+20:29:34	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/gkade.html
+20:29:34	Warning: 	HTML file (38726 bytes) retransferred due to lack of cache: www.kernel-panic.org/author/jgsack
+20:30:32	Warning: 	Warning: store text/html without scan: /home/tony/websites/KPLUG Demo/www.kernel-panic.org/author/jgsack.html
+
+HTTrack Website Copier/3.49-2 mirror complete in 20 minutes 4 seconds : 60 links scanned, 68 files written (1552399 bytes overall) [1574880 bytes received at 1308 bytes/sec], 1.1 requests per connection
+(2 errors, 23 warnings, 0 messages)
